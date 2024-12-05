@@ -28,33 +28,17 @@
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
-
-<div onclick="look('div1')" class="box">
-    <!-- название ката -->
-    <h2>Кат: что делает фронтенд</h2>
-    <!-- скрытый блок, который появится при нажатии -->
-    <div id = "div1" style="display: none">
-      <!-- сюда можно вставлять любое содержимое с любой сложностью вёрстки -->
-      <!-- Ссылки вкладки -->
-    <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
-    </div>
-
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
+</div>
 <!-- Содержимое вкладки -->
 <div id="London" class="tabcontent">
-  <p>Что не так?
-  
-  1. Сложная навигация: не сразу понятно, что чем является.
-    
-  2. Из под ката **Шаблоны** выпали несколько страниц, которые относятся к шаблонам
-    
-  3. Переменные, которые относятся к автоматизациям, смешались со страницами про шаблоны</p>
+ ![](_assets/3-3.jpg)
 </div>
-
 <div id="Paris" class="tabcontent">
-  <h3>Стало</h3>
-  <p>Париж является столицей Франции.</p>
+  ![](_assets/3.jpg)
 </div>
     </div>
 </div>
@@ -71,13 +55,13 @@ https://alice.yandex.ru/support/ru/services
 
 ### Что по текстам 
 
-https://alice.yandex.ru/support/ru/station/troubleshooting/assistant-reports#tape 
+[Алиса сообщает о проблеме со Станцией или молчит](https://alice.yandex.ru/support/ru/station/troubleshooting/assistant-reports#tape)
 
-https://alice.yandex.ru/support/ru/smart-home/scenarios/device-group 
+[Сценарии с группами устройств](https://alice.yandex.ru/support/ru/smart-home/scenarios/device-group)
 
-https://alice.yandex.ru/support/ru/station/troubleshooting/green-light 
+[Проблемы с устройствами Matter™](https://alice.yandex.ru/support/ru/smart-home/third-party/troubleshooting/matter)
 
-https://alice.yandex.ru/support/ru/smart-home/third-party/troubleshooting/matter
+[Почему на Станции горит зеленая подсветка](https://alice.yandex.ru/support/ru/station/troubleshooting/green-light)
 
 ---
 
@@ -133,18 +117,6 @@ https://alice.yandex.ru/support/ru/smart-home/third-party/troubleshooting/matter
 }
 </style>
 
-<style type="text/css">
-  /*  настройки внешнего вида блока с катом  */
-  .box{
-    cursor: pointer;
-    background: white;
-    border-radius: 24px;
-    padding: 24px;
-    margin: 20px;
-  }
-
-</style>
-
 <script>
 function openCity(evt, cityName) {
   // Объявить все переменные
@@ -166,18 +138,4 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-</script>
-
-<!-- скрипт, который раскрывает и закрывает кат -->
-  <script type= "text/javascript">
-
-    function look(type){
-    // получаем доступ к блоку, который нужно показать при нажатии
-    param=document.getElementById(type);
-    // если его нет на экране — показываем
-    if(param.style.display == "none") param.style.display = "block";
-    // иначе — скрываем
-    else param.style.display = "none"
-    }
-  </script>
 
