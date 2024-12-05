@@ -28,61 +28,71 @@
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
-<div class="tabs-container">
-  <ul class="tabs">
-    <li class="active">
-      <a href="">Part 1</a>
-    </li>
-    <li>
-      <a href="">Part 2</a>
-    </li>
-  </ul>
-  <div class="tabs-content">
-    <div class="tabs-panel active" data-index="0">
-      <img src="3-3.jpg">
-    </div>
-    <div class="tabs-panel" data-index="1">
-      <img src="3.jpg">
-    </div>
-  </div>
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
+</div>
+<!-- Содержимое вкладки -->
+<div id="London" class="tabcontent">
+  <img src="3-3.jpg">
+</div>
+<div id="Paris" class="tabcontent">
+  <img src="3-3.jpg">
 </div>
 
-<div class="tabs-container">
-  <ul class="tabs">
-    <li class="active">
-      <a href="">Part 1</a>
-    </li>
-    <li>
-      <a href="">Part 2</a>
-    </li>
-  </ul>
-  <div class="tabs-content">
-    <div class="tabs-panel active" data-index="2">
-      <img src="2-2.jpg">
-    </div>
-    <div class="tabs-panel" data-index="3">
-      <img src="2.jpg">
-    </div>
-  </div>
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London1')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris1')">Стало</button>
+</div>
+<!-- Содержимое вкладки -->
+<div id="London1" class="tabcontent">
+  <img src="2-2.jpg">
+</div>
+<div id="Paris1" class="tabcontent">
+  <img src="2.jpg">
 </div>
 
-<div class="tabs-container">
-  <ul class="tabs">
-    <li class="active">
-      <a href="">Part 1</a>
-    </li>
-    <li>
-      <a href="">Part 2</a>
-    </li>
-  </ul>
-  <div class="tabs-content">
-    <div class="tabs-panel active" data-index="4">
-      <img src="1-1.jpg">
-    </div>
-    <div class="tabs-panel" data-index="5">
-      <img src="1.jpg">
-    </div>
-  </div>
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London2')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris2')">Стало</button>
+</div>
+<!-- Содержимое вкладки -->
+<div id="London2" class="tabcontent">
+  <img src="1-1.jpg">
+</div>
+<div id="Paris2" class="tabcontent">
+  <img src="1.jpg">
+</div>
+
+* Еще я изменяла структуру разделов. Оценить изменения предлагаю в сравнении с [документацией на домене cloud](https://yandex.cloud/ru/docs/tracker/), которая нами больше не поддерживается:
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London3')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris3')">Стало</button>
+</div>
+<!-- Содержимое вкладки -->
+<div id="London3" class="tabcontent">
+  <img src="dashboard-cloud.gif">
+</div>
+<div id="Paris3" class="tabcontent">
+  <img src="dashboard-docs.gif">
+</div>
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London4')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris4')">Стало</button>
+</div>
+<!-- Содержимое вкладки -->
+<div id="London4" class="tabcontent">
+  <img src="templates-cloud.gif">
+</div>
+<div id="Paris4" class="tabcontent">
+  <img src="templates-docs.gif">
 </div>
 ---
 
@@ -96,7 +106,7 @@
 
 ### Что по текстам 
 
-[Алиса сообщает о проблеме со Станцией или молчит](https://alice.yandex.ru/support/ru/station/troubleshooting/assistant-reports#tape)
+<img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Алиса сообщает о проблеме со Станцией или молчит](https://alice.yandex.ru/support/ru/station/troubleshooting/assistant-reports#tape)
 
 <img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Сценарии с группами устройств](https://alice.yandex.ru/support/ru/smart-home/scenarios/device-group)
 
@@ -120,90 +130,62 @@
 
 
 <style>
-@media screen and (max-width: 600px) {
-  .tabs {
-    flex-direction: column;
-  }
-    
-  .tabs li {
-    width: 100%;
-  }
-    
-  .tabs li:not(:last-child) {
-    margin-right: 0;
-  }
-    
-  .tabs li a {
-    border-radius: 0;
-    opacity: 1;
-    top: 0;
-  }
-    
-  .tabs li.active a::before {
-    content: '•';
-    padding-right: 5px;
-  }
-    
-  .tabs-content {
-    border-radius: 0;
-  }
+/* Стиль вкладки */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
-.tabs-container {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 25px;
+
+/* Стиль кнопок, которые используются для открытия содержимого вкладки */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
 }
-.tabs {
-  display: flex;
+
+/* Изменение цвета фона кнопок при наведении курсора */
+.tab button:hover {
+  background-color: #ddd;
 }
-.tabs li:not(:last-child) {
-  margin-right: 7px;
+
+/* Создание активного/текущего класса связи вкладки */
+.tab button.active {
+  background-color: #ccc;
 }
-.tabs li a {
-  display: block;
-  position: relative;
-  top: 4px;
-  padding: 10px 25px;
-  border-radius: 2px 2px 0 0;
-  background: white;
-  opacity: 0.7;
-  transition: all 0.1s ease-in-out;
-}
-.tabs li.active a,
-.tabs li a:hover {
-  opacity: 1;
-  top: 0;
-}
-.tabs-content {
-  position: relative;
-  z-index: 2;
-  padding: 25px;
-  border-radius: 0 4px 4px 4px;
-  background: white;
-}
-.tabs-panel {
+
+/* Стиль содержимого вкладки */
+.tabcontent {
   display: none;
-}
-.tabs-panel.active {
-  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 </style>
 
 <script>
-const tabLinks = document.querySelectorAll(".tabs a");
-const tabPanels = document.querySelectorAll(".tabs-panel");
-for(let el of tabLinks) {
-  el.addEventListener("click", e => {
-    e.preventDefault();
-    
-    document.querySelector('.tabs li.active').classList.remove("active");
-    document.querySelector('.tabs-panel.active').classList.remove("active");
-    const parentListItem = el.parentElement;
-    parentList.classList.add("active");
-    const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
-    
-    const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
-    panel[0].classList.add("active");
-  });
+function openCity(evt, cityName) {
+  // Объявить все переменные
+  var i, tabcontent, tablinks;
+
+  // Получить все элементы с помощью class="tabcontent" и спрятать их
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Получить все элементы с помощью class="tablinks" и удалить class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
 </script>
