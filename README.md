@@ -24,7 +24,7 @@
 
   ![](tracker.png) [Интерактивное руководство по Tracker](https://yandex.ru/support/tracker/ru/user/quick-guide)
 
-  ![](tracker.png) [Удалить задачу](https://yandex.ru/support/tracker/ru/user/ticket-cancel)
+  ![](tracker.png) [~~Удалить задачу~~](#) (еще не смержили)
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
@@ -64,15 +64,41 @@
   <img src="1.jpg"/>
 </div>
 
+* Еще я изменяла структуру разделов. Оценить изменения предлагаю в сравнении с [документацией на домене cloud](https://yandex.cloud/ru/docs/tracker/), которая нами больше не поддерживается:
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London4')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris4')">Стало</button>
+</div>
+<div id="London4" class="tabcontent">
+ <img src="templates-cloud.gif"/>
+</div>
+<div id="Paris4" class="tabcontent">
+  <img src="templates-docs.gif"/>
+</div>
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London3')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris3')">Стало</button>
+</div>
+<div id="London3" class="tabcontent">
+ <img src="dashboard-cloud.gif"/>
+</div>
+<div id="Paris3" class="tabcontent">
+  <img src="dashboard-docs.gif"/>
+</div>
+
 ---
 
 ## Умный дом Яндекса {#smart-home}
 
 Это объемная документация со сложной структурой, с которой я работаю как дополнительный писатель. Здесь мне приходится кропотливо чинить сломанные YFM-разметку и CSS-стили для разводящих страниц (например, <img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Умная розетка](https://alice.yandex.ru/support/ru/socket/) и <img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Решение проблем](https://alice.yandex.ru/support/ru/station/troubleshooting/)), работать с инклюдами и переменными.  Здесь же застала технологию DITA на языке XML.
 
-Еще была интересная задача: с помощью ИИ я сгенерировала около сотни ссылок на адреса сервисных центров в Яндекс Картах и добавила их в таблицы как кнопку «Посмотреть на карте». Вот одна из страниц с такими таблицами: 
+<u>Еще была интересная задача:</u> с помощью ИИ я сгенерировала около сотни ссылок на адреса сервисных центров в Яндекс Картах и добавила их в таблицы как кнопку «Посмотреть на карте». Вот одна из страниц с такими таблицами: 
 
-[Замена и ремонт](https://alice.yandex.ru/support/ru/services)
+<img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Замена и ремонт](https://alice.yandex.ru/support/ru/services)
 
 ### Что по текстам 
 
@@ -96,7 +122,7 @@
 
 3. Предлагала структуру и защищала свои идеи.
 
-Как только ссылка появится в продакшене, я обязательно ее добавлю)
+<u>Как только ссылка появится в продакшене, я обязательно ее добавлю)</u>
 
 
 
@@ -154,6 +180,12 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
+
+  // Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
 
   // Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
   document.getElementById(cityName).style.display = "block";
