@@ -22,9 +22,9 @@
 
 * Как писатель я приложила руку почти к каждой странице. Дам ссылки на те, которые писала полностью сама:
 
-  [Интерактивное руководство по Tracker](https://yandex.ru/support/tracker/ru/user/quick-guide)
+  ![](_assets/tracker.png) [Интерактивное руководство по Tracker](https://yandex.ru/support/tracker/ru/user/quick-guide)
 
-  [Удалить задачу](https://yandex.ru/support/tracker/ru/user/ticket-cancel)
+  ![](_assets/tracker.png) [Удалить задачу](https://yandex.ru/support/tracker/ru/user/ticket-cancel)
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
@@ -42,48 +42,47 @@
 
 <!-- Ссылки вкладки -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
+  <button class="tablinks" onclick="openCity(event, 'London1')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris1')">Стало</button>
 </div>
-<div id="London" class="tabcontent">
+<div id="London1" class="tabcontent">
  <img src="1-1.jpg"/>
 </div>
-<div id="Paris" class="tabcontent">
+<div id="Paris1" class="tabcontent">
   <img src="1.jpg"/>
 </div>
 
 <!-- Ссылки вкладки -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
+  <button class="tablinks" onclick="openCity(event, 'London2')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris2')">Стало</button>
 </div>
-<div id="London" class="tabcontent">
+<div id="London2" class="tabcontent">
  <img src="2-2.jpg"/>
 </div>
-<div id="Paris" class="tabcontent">
+<div id="Paris2" class="tabcontent">
   <img src="2.jpg"/>
 </div>
-
 
 ---
 
 ## Умный дом Яндекса {#smart-home}
 
-Это объемная документация со сложной структурой, с которой я работаю как дополнительный писатель. Здесь мне приходится кропотливо чинить сломанные YFM-разметку и CSS-стили для разводящих страниц (например, [Умная розетка](https://alice.yandex.ru/support/ru/socket/) и [Решение проблем](https://alice.yandex.ru/support/ru/station/troubleshooting/)), работать с инклюдами и переменными.  Здесь же застала технологию DITA на языке XML.
+Это объемная документация со сложной структурой, с которой я работаю как дополнительный писатель. Здесь мне приходится кропотливо чинить сломанные YFM-разметку и CSS-стили для разводящих страниц (например, <img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Умная розетка](https://alice.yandex.ru/support/ru/socket/) и <img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Решение проблем](https://alice.yandex.ru/support/ru/station/troubleshooting/)), работать с инклюдами и переменными.  Здесь же застала технологию DITA на языке XML.
 
 Еще была интересная задача: с помощью ИИ я сгенерировала около сотни ссылок на адреса сервисных центров в Яндекс Картах и добавила их в таблицы как кнопку «Посмотреть на карте». Вот одна из страниц с такими таблицами: 
 
-https://alice.yandex.ru/support/ru/services
+[Замена и ремонт](https://alice.yandex.ru/support/ru/services)
 
 ### Что по текстам 
 
 [Алиса сообщает о проблеме со Станцией или молчит](https://alice.yandex.ru/support/ru/station/troubleshooting/assistant-reports#tape)
 
-[Сценарии с группами устройств](https://alice.yandex.ru/support/ru/smart-home/scenarios/device-group)
+<img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Сценарии с группами устройств](https://alice.yandex.ru/support/ru/smart-home/scenarios/device-group)
 
-[Проблемы с устройствами Matter™](https://alice.yandex.ru/support/ru/smart-home/third-party/troubleshooting/matter)
+<img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Проблемы с устройствами Matter™](https://alice.yandex.ru/support/ru/smart-home/third-party/troubleshooting/matter)
 
-[Почему на Станции горит зеленая подсветка](https://alice.yandex.ru/support/ru/station/troubleshooting/green-light)
+<img src="https://yastatic.net/s3/doc-binary/docs/support/selfhost/alice/station/smart-home-app.svg" alt="" yfm_patched="1" height="20px"> [Почему на Станции горит зеленая подсветка](https://alice.yandex.ru/support/ru/station/troubleshooting/green-light)
 
 ---
 
@@ -160,4 +159,3 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
