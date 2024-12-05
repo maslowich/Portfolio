@@ -64,32 +64,6 @@
   <img src="1.jpg"/>
 </div>
 
-* Еще я изменяла структуру разделов. Оценить изменения предлагаю в сравнении с [документацией на домене cloud](https://yandex.cloud/ru/docs/tracker/), которая нами больше не поддерживается:
-
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London4')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris4')">Стало</button>
-</div>
-<div id="London4" class="tabcontent">
- <img src="templates-cloud.gif"/>
-</div>
-<div id="Paris4" class="tabcontent">
-  <img src="templates-docs.gif"/>
-</div>
-
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London3')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris3')">Стало</button>
-</div>
-<div id="London3" class="tabcontent">
- <img src="dashboard-cloud.gif"/>
-</div>
-<div id="Paris3" class="tabcontent">
-  <img src="dashboard-docs.gif"/>
-</div>
-
 ---
 
 ## Умный дом Яндекса {#smart-home}
