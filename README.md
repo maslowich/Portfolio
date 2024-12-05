@@ -35,15 +35,11 @@
     <!-- скрытый блок, который появится при нажатии -->
     <div id = "div1" style="display: none">
       <!-- сюда можно вставлять любое содержимое с любой сложностью вёрстки -->
-
+      <!-- Ссылки вкладки -->
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
     </div>
-</div>
-
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
-</div>
 
 <!-- Содержимое вкладки -->
 <div id="London" class="tabcontent">
@@ -60,7 +56,8 @@
   <h3>Стало</h3>
   <p>Париж является столицей Франции.</p>
 </div>
-
+    </div>
+</div>
 
 ---
 
