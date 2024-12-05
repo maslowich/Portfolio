@@ -22,9 +22,9 @@
 
 * Как писатель я приложила руку почти к каждой странице. Дам ссылки на те, которые писала полностью сама:
 
-  ![](_assets/tracker.png) [Интерактивное руководство по Tracker](https://yandex.ru/support/tracker/ru/user/quick-guide)
+  ![](tracker.png) [Интерактивное руководство по Tracker](https://yandex.ru/support/tracker/ru/user/quick-guide)
 
-  ![](_assets/tracker.png) [Удалить задачу](https://yandex.ru/support/tracker/ru/user/ticket-cancel)
+  ![](tracker.png) [Удалить задачу](https://yandex.ru/support/tracker/ru/user/ticket-cancel)
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
@@ -42,18 +42,6 @@
 
 <!-- Ссылки вкладки -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London1')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris1')">Стало</button>
-</div>
-<div id="London1" class="tabcontent">
- <img src="1-1.jpg"/>
-</div>
-<div id="Paris1" class="tabcontent">
-  <img src="1.jpg"/>
-</div>
-
-<!-- Ссылки вкладки -->
-<div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London2')">Было</button>
   <button class="tablinks" onclick="openCity(event, 'Paris2')">Стало</button>
 </div>
@@ -62,6 +50,18 @@
 </div>
 <div id="Paris2" class="tabcontent">
   <img src="2.jpg"/>
+</div>
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London1')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris1')">Стало</button>
+</div>
+<div id="London1" class="tabcontent">
+ <img src="1-1.jpg"/>
+</div>
+<div id="Paris1" class="tabcontent">
+  <img src="1.jpg"/>
 </div>
 
 ---
