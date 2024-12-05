@@ -120,6 +120,34 @@
 
 
 <style>
+@media screen and (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+    
+  .tabs li {
+    width: 100%;
+  }
+    
+  .tabs li:not(:last-child) {
+    margin-right: 0;
+  }
+    
+  .tabs li a {
+    border-radius: 0;
+    opacity: 1;
+    top: 0;
+  }
+    
+  .tabs li.active a::before {
+    content: '•';
+    padding-right: 5px;
+  }
+    
+  .tabs-content {
+    border-radius: 0;
+  }
+}
 .tabs-container {
   max-width: 1000px;
   margin: 50px auto;
