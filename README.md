@@ -33,14 +33,11 @@
   <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
 </div>
-<!-- Содержимое вкладки -->
 <div id="London" class="tabcontent">
- ![](_assets/3-3.jpg)
+ <img src="_assets/3-3.jpg">
 </div>
 <div id="Paris" class="tabcontent">
-  ![](_assets/3.jpg)
-</div>
-    </div>
+  <img src="_assets/3.jpg">
 </div>
 
 ---
