@@ -2,7 +2,7 @@
 
 - [Yandex Tracker](#yandex-tracker)
 - [Алиса и умные устройства](#smart-home)
-- [Yandex Factory](#yandex-factory)
+- [Яндекс Фабрика](#yandex-factory)
 
 ---
 
