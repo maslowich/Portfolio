@@ -28,40 +28,62 @@
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
-</div>
-<div id="London" class="tabcontent">
- <img src="3-3.jpg"/>
-</div>
-<div id="Paris" class="tabcontent">
-  <img src="3.jpg"/>
-</div>
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London1')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris1')">Стало</button>
-</div>
-<div id="London1" class="tabcontent">
- <img src="2-2.jpg"/>
-</div>
-<div id="Paris1" class="tabcontent">
-  <img src="2.jpg"/>
-</div>
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London2')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris2')">Стало</button>
-</div>
-<div id="London2" class="tabcontent">
- <img src="1-1.jpg"/>
-</div>
-<div id="Paris2" class="tabcontent">
-  <img src="1.jpg"/>
+<div class="tabs-container">
+  <ul class="tabs">
+    <li class="active">
+      <a href="">Part 1</a>
+    </li>
+    <li>
+      <a href="">Part 2</a>
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div class="tabs-panel active" data-index="0">
+      <img src="3-3.jpg">
+    </div>
+    <div class="tabs-panel" data-index="1">
+      <img src="3.jpg">
+    </div>
+  </div>
 </div>
 
+<div class="tabs-container">
+  <ul class="tabs">
+    <li class="active">
+      <a href="">Part 1</a>
+    </li>
+    <li>
+      <a href="">Part 2</a>
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div class="tabs-panel active" data-index="2">
+      <img src="2-2.jpg">
+    </div>
+    <div class="tabs-panel" data-index="3">
+      <img src="2.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="tabs-container">
+  <ul class="tabs">
+    <li class="active">
+      <a href="">Part 1</a>
+    </li>
+    <li>
+      <a href="">Part 2</a>
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div class="tabs-panel active" data-index="4">
+      <img src="1-1.jpg">
+    </div>
+    <div class="tabs-panel" data-index="5">
+      <img src="1.jpg">
+    </div>
+  </div>
+</div>
 ---
 
 ## Умный дом Яндекса {#smart-home}
@@ -97,69 +119,52 @@
 <u>Как только ссылка появится в продакшене, я обязательно ее добавлю)</u>
 
 
-
 <style>
-/* Стиль вкладки */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Стиль кнопок, которые используются для открытия содержимого вкладки */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 10px;
-  transition: 0.3s;
-}
-
-/* Изменение цвета фона кнопок при наведении курсора */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Создание активного/текущего класса связи вкладки */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Стиль содержимого вкладки */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+@media screen and (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+    
+  .tabs li {
+    width: 100%;
+  }
+    
+  .tabs li:not(:last-child) {
+    margin-right: 0;
+  }
+    
+  .tabs li a {
+    border-radius: 0;
+    opacity: 1;
+    top: 0;
+  }
+    
+  .tabs li.active a::before {
+    content: '•';
+    padding-right: 5px;
+  }
+    
+  .tabs-content {
+    border-radius: 0;
+  }
 }
 </style>
 
 <script>
-function openCity(evt, cityName) {
-  // Объявить все переменные
-  var i, tabcontent, tablinks;
-
-  // Получить все элементы с помощью class="tabcontent" и спрятать их
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Получить все элементы с помощью class="tablinks" и удалить class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+const tabLinks = document.querySelectorAll(".tabs a");
+const tabPanels = document.querySelectorAll(".tabs-panel");
+for(let el of tabLinks) {
+  el.addEventListener("click", e => {
+    e.preventDefault();
+    
+    document.querySelector('.tabs li.active').classList.remove("active");
+    document.querySelector('.tabs-panel.active').classList.remove("active");
+    const parentListItem = el.parentElement;
+    parentList.classList.add("active");
+    const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+    
+    const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
+    panel[0].classList.add("active");
+  });
 }
-
-
-  // Показать текущую вкладку и добавить "active" класс для кнопки, которая открыла вкладку
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+</script>
