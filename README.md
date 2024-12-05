@@ -28,6 +28,7 @@
 
 * Несколько раз редактировала интерфейсные тексты: например, всплывающие уведомления в Forms и онбординг в Tracker. К моему сожалению, эти блоки больше не отображаются в интерфейсе, а когда отображались — я их не заскринила. Нашла только скриншоты «до», а «после» нарисовала на коленке:
 
+![](tracker.png) **Виджет «Время цикла»**
 <!-- Ссылки вкладки -->
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
@@ -38,9 +39,11 @@
   <img src="3-3.jpg">
 </div>
 <div id="Paris" class="tabcontent">
-  <img src="3-3.jpg">
+  <img src="3.jpg">
 </div>
+<br>
 
+![](tracker.png) **Копирование дашбордов и виджетов**
 <!-- Ссылки вкладки -->
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London1')">Было</button>
@@ -53,7 +56,9 @@
 <div id="Paris1" class="tabcontent">
   <img src="2.jpg">
 </div>
+<br>
 
+![](tracker.png) **Диаграмма «Жизненный цикл задачи»**
 <!-- Ссылки вкладки -->
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London2')">Было</button>
@@ -66,22 +71,12 @@
 <div id="Paris2" class="tabcontent">
   <img src="1.jpg">
 </div>
-
+Не судите мои табы строго
+<br>
+<br>
 * Еще я изменяла структуру разделов. Оценить изменения предлагаю в сравнении с [документацией на домене cloud](https://yandex.cloud/ru/docs/tracker/), которая нами больше не поддерживается:
 
-<!-- Ссылки вкладки -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London3')">Было</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris3')">Стало</button>
-</div>
-<!-- Содержимое вкладки -->
-<div id="London3" class="tabcontent">
-  <img src="dashboard-cloud.gif">
-</div>
-<div id="Paris3" class="tabcontent">
-  <img src="dashboard-docs.gif">
-</div>
-
+![](tracker.png) **Раздел «Автоматизация и шаблоны»**
 <!-- Ссылки вкладки -->
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London4')">Было</button>
@@ -89,10 +84,37 @@
 </div>
 <!-- Содержимое вкладки -->
 <div id="London4" class="tabcontent">
+  <p>Здесь ссылки расположены непоследовательно:</p>
+  <p>1. есть кат «Шаблоны»;</p>
+  <p>2. и еще две страницы с тематикой «шаблоны», которые находятся за пределами ката;</p>
+  <p>3. между ними затесалась страница про переменные;</p>
+  <p>Сходу непонятно, что здесь относится к автоматизациям, а что к шаблонам, и какая между ними связь.</p>
   <img src="templates-cloud.gif">
 </div>
 <div id="Paris4" class="tabcontent">
+  <p>Теперь у каждой сущности есть свой понятный раздел.</p>
+  <p>Страница <a href="https://yandex.ru/support/tracker/ru/manager/work-process">Шаблоны рабочих процессов</a> переехала в другой раздел: все-таки эти шаблоны относятся к базовым настройкам Tracker, и страницу про них ряд-ли будут искать в разделе про шаблоны для типовых комментариев.</p>
   <img src="templates-docs.gif">
+</div>
+<br>
+
+![](tracker.png) **Раздел «Статистика и дашборды»**
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London3')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris3')">Стало</button>
+</div>
+<!-- Содержимое вкладки -->
+<div id="London3" class="tabcontent">
+  <p>Что здесь не так?</p>
+  <p>1. В разделе «Дашборды» появляется еще одна сущность  — «Виджеты». Она нигде не заявлена, и пользователь может не догадаться, что между дашбордами и виджетами есть связь и информацию про них нужно искать именно под этим катом.<br>Пояснение: виджет — это дополнительный блок для дашборда.</p>
+  <p>2. А вот зачем в заголовке заявлена статистика — непонятно, раздел не о ней. Про статистику всего две страницы: «Статистика по задачам», которая является виджетом, и «Статистика очереди», которая отображается в другом месте и никакого отношения к дашбордам и виджетам не имеет.</p>
+  <img src="dashboard-cloud.gif">
+</div>
+<div id="Paris3" class="tabcontent">
+  <p>1. Теперь раздел посвящен двум связанным сущностям: дашбордам и виджетам.</p>
+  <p>2. Страница <a href="https://yandex.ru/support/tracker/ru/manager/statistics">Статистика очереди</a> не относится к теме и отправилась в другой раздел.</p>
+  <img src="dashboard-docs.gif">
 </div>
 ---
 
