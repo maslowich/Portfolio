@@ -34,11 +34,36 @@
   <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
 </div>
 <div id="London" class="tabcontent">
- <img src="_assets/3-3.jpg">
+ <img src="3-3.jpg"/>
 </div>
 <div id="Paris" class="tabcontent">
-  <img src="_assets/3.jpg">
+  <img src="3.jpg"/>
 </div>
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
+</div>
+<div id="London" class="tabcontent">
+ <img src="1-1.jpg"/>
+</div>
+<div id="Paris" class="tabcontent">
+  <img src="1.jpg"/>
+</div>
+
+<!-- Ссылки вкладки -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Было</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Стало</button>
+</div>
+<div id="London" class="tabcontent">
+ <img src="2-2.jpg"/>
+</div>
+<div id="Paris" class="tabcontent">
+  <img src="2.jpg"/>
+</div>
+
 
 ---
 
